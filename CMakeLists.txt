@@ -34,6 +34,8 @@ else()
   include(${CPM_DIR}/CPM.cmake)
 endif()
 
+CPM_InitModule(${CPM_MODULE_NAME})
+
 set(MODEL_BASE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/models)
 set(MODEL_PATH ${MODEL_BASE_PATH}/conv12_conv48_fc1024_fc_2)
 
