@@ -34,6 +34,8 @@ else()
   include(${CPM_DIR}/CPM.cmake)
 endif()
 
+CPM_ForceOnlyOneModuleVersion()
+
 CPM_InitModule(${CPM_MODULE_NAME})
 
 set(MODEL_BASE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/models)
