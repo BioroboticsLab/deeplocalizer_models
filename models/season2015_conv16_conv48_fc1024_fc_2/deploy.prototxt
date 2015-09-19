@@ -2,10 +2,8 @@ name: "Deeplocalizer"
 input: "data"
 input_dim: 128
 input_dim: 1
-input_dim: 100
-input_dim: 100
-
-
+input_dim: 60
+input_dim: 60
 
 layer {
   name: "conv1"
@@ -21,12 +19,11 @@ layer {
     decay_mult: 0
   }
   convolution_param {
-    num_output: 12
+    num_output: 16
     kernel_size: 5
     stride: 2
     weight_filler {
-      type: "gaussian"
-      std: 0.01
+      type: "xavier"
     }
     bias_filler {
       type: "gaussian"
@@ -69,8 +66,7 @@ layer {
     pad: 2
     kernel_size: 4
     weight_filler {
-      type: "gaussian"
-      std: 0.01
+      type: "xavier"
     }
     bias_filler {
       type: "constant"
@@ -111,8 +107,7 @@ layer {
   inner_product_param {
     num_output: 1024
     weight_filler {
-      type: "gaussian"
-      std: 0.005
+      type: "xavier"
     }
     bias_filler {
       type: "constant"
@@ -154,8 +149,7 @@ layer {
   inner_product_param {
     num_output: 2
     weight_filler {
-      type: "gaussian"
-      std: 0.01
+      type: "xavier"
     }
     bias_filler {
       type: "constant"
