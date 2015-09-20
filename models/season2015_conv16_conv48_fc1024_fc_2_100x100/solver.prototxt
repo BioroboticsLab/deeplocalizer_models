@@ -1,0 +1,14 @@
+net: "models/season2015_conv16_conv48_fc1024_fc_2/train_val.prototxt"
+test_iter: 100
+test_interval: 500
+base_lr: 0.001
+momentum:0.9
+momentum2:0.999
+lr_policy: "fixed"
+stepsize: 10000
+display: 100
+max_iter: 50000
+snapshot: 5000
+snapshot_prefix: "models/season2015_conv16_conv48_fc1024_fc_2/model"
+solver_type: ADAM
+solver_mode: GPU
