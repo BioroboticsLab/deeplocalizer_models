@@ -39,6 +39,7 @@ CPM_ForceOnlyOneModuleVersion()
 CPM_InitModule(${CPM_MODULE_NAME})
 
 set(MODEL_BASE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/models)
-set(MODEL_PATH ${MODEL_BASE_PATH}/conv12_conv48_fc1024_fc_2)
+set(MODEL_PATH_2014 ${MODEL_BASE_PATH}/conv12_conv48_fc1024_fc_2)
 
-CPM_ExportAdditionalDefinition("-DMODEL_PATH=${MODEL_PATH}")
+CPM_ExportAdditionalDefinition("-DMODEL_PATH_2014=${MODEL_PATH_2014}")
+CPM_ExportAdditionalDefinition("-DMODEL_BASE_PATH=${MODEL_BASE_PATH}")
